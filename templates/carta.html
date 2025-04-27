@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para ti 💌</title>
+    <style>
+        body {
+            background-image: url("/static/imagen.jpg");
+            background-size: cover;
+            background-position: center;
+            font-family: 'Georgia', serif;
+            color: white;
+            text-shadow: 2px 2px 4px #000;
+            padding: 50px;
+        }
+        .carta {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 700px;
+            margin: auto;
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 20px;
+            line-height: 1.6;
+            white-space: pre-wrap;
+        }
+        #playButton {
+            padding: 10px 20px;
+            background: #ff69b4;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="carta">
+        <h1>Hola mi amor 💜</h1>
+        <p>
+Solo quería probar mi progreso, pero quería recordarte lo mucho que te amo.  
+Hace unas horas te dije que quería darte una carta, y pues bueno jeje.
+
+Te amo muchísimo mi amor, estoy tan feliz de que ya tenemos 7 meses juntos.  
+Hemos progresado muchísimo como pareja y eso me hace muy feliz.  
+Cada día contigo es una nueva experiencia que disfruto muchísimo.
+
+Gracias por siempre estar para mí y te juro que siempre haré lo posible  
+para estar siempre para ti. Eres una niña muy hermosa y única.  
+
+Te amo. Esta carta es para que siempre la tengas contigo a donde sea que vayas.  
+
+— Michaer. 💜
+        </p>
+
+        <button id="playButton">💜 Haz clic para escuchar la música 💜</button>
+        <audio id="musica" loop>
+            <source src="/static/musica.mp3" type="audio/mpeg">
+            Tu navegador no soporta audio HTML5.
+        </audio>
+    </div>
+
+    <script>
+        document.getElementById("playButton").addEventListener("click", function() {
+            const audio = document.getElementById("musica");
+            audio.play();
+            this.style.display = "none"; // Oculta el botón después de hacer clic
+        });
+    </script>
+</body>
+</html>

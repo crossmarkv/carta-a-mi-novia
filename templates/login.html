@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Iniciar Sesión</title>
+    <style>
+        body {
+            background-color: #fff0f5;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        form {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background: #ff69b4;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="/login" method="post">
+        <h2>Bienvenida 💖</h2>
+        <input type="text" name="usuario" placeholder="Usuario"><br>
+        <input type="password" name="clave" placeholder="Contraseña"><br>
+        <button type="submit">Entrar</button>
+    </form>
+</body>
+</html>
