@@ -26,6 +26,6 @@ def carta():
 
 # Este bloque solo se usa al correr localmente
 if __name__ == "__main__":
-    # Usamos el puerto proporcionado por Azure
-    port = int(os.environ.get("PORT", 5000))  # Si no encuentra PORT, usará 5000
-    app.run(host="0.0.0.0", port=port)  # Asegúrate de que la app escuche en todas las interfaces
+    from os import environ
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
