@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for  # type: ignore
+from flask import Flask, render_template, request, redirect, url_for
+import os  # Para obtener el puerto de la variable de entorno
 
 app = Flask(__name__)
 
@@ -25,4 +26,6 @@ def carta():
 
 # Este bloque solo se usa al correr localmente
 if __name__ == "__main__":
-    app.run()
+    # Usamos el puerto proporcionado por Azure
+    port = int(os.environ.get("PORT", 5000))  # Si no encuentra PORT, usará 5000
+    app.run(host="0.0.0.0", port=port)  # Asegúrate de que la app escuche en todas las interfaces
